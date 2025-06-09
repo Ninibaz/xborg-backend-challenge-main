@@ -23,6 +23,7 @@ Implementation should be submitted via a public GitHub repository, or a private 
 - `client`: [Next.js](https://nextjs.org/) app
 - `api`: [Nestjs](https://nestjs.com) app
 - `tsconfig`: Typescript configuration used throughout the monorepo
+- `jest`: [Jest](https://jestjs.io/) for unit, integration, e2e, and performance testing
 
 ## Utilities
 

@@ -5,6 +5,8 @@
   "author": "James Ward",
   "private": true,
   "scripts": {
+    "test": "jest",
+
     "build": "nest build",
     "format": "prisma format && prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -42,6 +44,7 @@
     "siwe": "2.1.4"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "@nestjs/cli": "10.0.0",
     "@nestjs/schematics": "10.0.0",
     "@nestjs/testing": "10.0.0",

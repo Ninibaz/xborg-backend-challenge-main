@@ -1,6 +1,8 @@
 {
   "private": true,
   "scripts": {
+    "test": "jest",
+
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -10,6 +12,7 @@
     "start:local:infra": "docker compose --file .local/docker-compose.yml up --detach"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "@turbo/gen": "1.9.7",
     "eslint": "7.32.0",
     "husky": "8.0.3",
