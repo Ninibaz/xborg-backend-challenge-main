@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppModule } from './app.module';
+import { AppModule } from '../../app.module';
 import { ConfigModule } from '@nestjs/config';
-import { PrismaModule } from './prisma/prisma.module';
-import { UserModule } from './user/user.module';
+import { PrismaModule } from '../../prisma/prisma.module';
+import { UserModule } from '../user.module';
 
 describe('AppModule', () => {
   let module: TestingModule;
