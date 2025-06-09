@@ -1,8 +1,9 @@
 {
-  "extends": "tsconfig/nest.json",
+  "extends": "../../packages/tsconfig/nest.json", 
   "strictNullChecks": true,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "types": ["jest", "node"]
   }
 }

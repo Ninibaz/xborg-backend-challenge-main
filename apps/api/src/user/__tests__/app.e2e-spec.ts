@@ -80,35 +80,4 @@ describe('App E2E (full repository)', () => {
     await expect(client.send(GetUserCall, dto).toPromise()).rejects.toThrow();
   });
 
-  it('should register a new user', async () => {
-    const user: User = await client.send(SignUpCall, TEST_USER).toPromise();
-    expect(user).toMatchObject({
-      address: TEST_USER.address,
-      userName: TEST_USER.userName,
-      email: TEST_USER.email,
-      profile: expect.objectContaining({
-        firstName: TEST_USER.firstName,
-        lastName: TEST_USER.lastName,
-      }),
-    });
-  });
-
-  it('should not allow duplicate user registration', async () => {
-    await expect(client.send(SignUpCall, TEST_USER).toPromise()).rejects.toThrow();
-  });
-
-  it('should retrieve the registered user', async () => {
-    const dto: GetUserDTO = { address: TEST_USER.address };
-    const user: User = await client.send(GetUserCall, dto).toPromise();
-    expect(user).toMatchObject({
-      address: TEST_USER.address,
-      userName: TEST_USER.userName,
-      email: TEST_USER.email,
-    });
-  });
-
-  it('should return error for non-existent user', async () => {
-    const dto: GetUserDTO = { address: 'notfound' };
-    await expect(client.send(GetUserCall, dto).toPromise()).rejects.toThrow();
-  });
 });
