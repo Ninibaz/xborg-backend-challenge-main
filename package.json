@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md,yml}\"",
+    "prepare": "husky install",
+    "start:local:infra": "docker compose --file .local/docker-compose.yml up --detach"
+  },
+  "devDependencies": {
+    "@turbo/gen": "1.9.7",
+    "eslint": "7.32.0",
+    "husky": "8.0.3",
+    "prettier": "2.5.1",
+    "turbo": "latest"
+  },
+  "name": "xborg-tech-challenge",
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

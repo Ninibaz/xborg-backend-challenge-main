@@ -1,0 +1,17 @@
+{
+  "name": "tsconfig",
+  "description": "Typescript config for all apps",
+  "author": "James Ward",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "base.json",
+    "next.json",
+    "nest.json",
+    "react-library.json"
+  ]
+}
