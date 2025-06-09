@@ -79,7 +79,6 @@ describe('App E2E (full repository)', () => {
     const dto: GetUserDTO = { address: 'notfound' };
     await expect(client.send(GetUserCall, dto).toPromise()).rejects.toThrow();
   });
-});
 
   it('should register a new user', async () => {
     const user: User = await client.send(SignUpCall, TEST_USER).toPromise();
