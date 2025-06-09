@@ -1,6 +1,6 @@
 import { INestMicroservice } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { PrismaService } from './prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 
 jest.mock('@nestjs/core');
 
@@ -28,7 +28,7 @@ describe('bootstrap', () => {
   it('should start the microservice and setup shutdown hooks', async () => {
     // Import the bootstrap function after mocks are set up
     const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation();
-    const { default: runBootstrap } = await import('./main');
+    const { default: runBootstrap } = await import('../../main');
     // Wait for the bootstrap to finish
     await new Promise((r) => setTimeout(r, 10));
 
